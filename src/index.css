@@ -1,0 +1,94 @@
+:root {
+  /* Colors */
+  --accent-color: #C6FF3D;
+  --accent-hover: #a5d633;
+  --accent-light: rgba(198, 255, 61, 0.2);
+  
+  /* Dark Theme Variables */
+  --bg-dark: #0A0A0A;
+  --bg-dark-alt: #111111;
+  --text-dark: #F5F5F5;
+  --text-muted-dark: #A0A0A0;
+  
+  /* Light Theme Variables */
+  --bg-light: #FFFFFF;
+  --bg-light-alt: #FAFAFA;
+  --text-light: #111111;
+  --text-muted-light: #555555;
+  
+  /* Typography */
+  --font-heading: 'Open Sans', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Theme Classes */
+.theme-dark {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+.theme-dark h1, .theme-dark h2, .theme-dark h3 {
+    color: var(--text-dark);
+}
+.theme-dark p {
+    color: var(--text-muted-dark);
+}
+
+.theme-light {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+.theme-light h1, .theme-light h2, .theme-light h3 {
+    color: var(--text-light);
+}
+.theme-light p {
+    color: var(--text-muted-light);
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 0;
+  }
+}
