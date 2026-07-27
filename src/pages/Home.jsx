@@ -121,7 +121,7 @@ export default function Home() {
           <AnimatedSection>
             <h2>Ready to Begin?</h2>
             <p>Add a final call to action description here to encourage contact.</p>
-            <Button to="/contact" variant="primary">Contact Us Now</Button>
+            <Button to="/contact" variant="primary">Join Our Journey</Button>
           </AnimatedSection>
         </div>
       </section>

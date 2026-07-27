@@ -6,6 +6,7 @@ import Programs from './pages/Programs';
 import Results from './pages/Results';
 import Contact from './pages/Contact';
 import Consult from './pages/Consult';
+import Login from './pages/Login';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -28,6 +29,7 @@ function App() {
         <Route path="/results" element={<Results />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/consult" element={<Consult />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </>
   );
