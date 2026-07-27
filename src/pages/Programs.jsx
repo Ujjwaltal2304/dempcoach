@@ -28,7 +28,7 @@ export default function Programs() {
             <Dumbbell size={40} className="service-icon" />
             <h3>Service One</h3>
             <p>Add a description for this service. Explain what it includes and who it is best suited for.</p>
-            <p className="price-starting">Starting at $X/month</p>
+            <p className="price-starting">Starting at ₹X/month</p>
             <Button to="/contact" variant="outline">Learn More</Button>
           </AnimatedSection>
           
@@ -36,7 +36,7 @@ export default function Programs() {
             <Laptop size={40} className="service-icon" />
             <h3>Service Two</h3>
             <p>Add a description for this service. Explain what it includes and who it is best suited for.</p>
-            <p className="price-starting">Starting at $X/month</p>
+            <p className="price-starting">Starting at ₹X/month</p>
             <Button to="/contact" variant="outline">Learn More</Button>
           </AnimatedSection>
           
@@ -44,7 +44,7 @@ export default function Programs() {
             <Utensils size={40} className="service-icon" />
             <h3>Service Three</h3>
             <p>Add a description for this service. Explain what it includes and who it is best suited for.</p>
-            <p className="price-starting">Starting at $X/month</p>
+            <p className="price-starting">Starting at ₹X/month</p>
             <Button to="/contact" variant="outline">Learn More</Button>
           </AnimatedSection>
           
@@ -52,7 +52,7 @@ export default function Programs() {
             <Users size={40} className="service-icon" />
             <h3>Service Four</h3>
             <p>Add a description for this service. Explain what it includes and who it is best suited for.</p>
-            <p className="price-starting">Starting at $X/month</p>
+            <p className="price-starting">Starting at ₹X/month</p>
             <Button to="/contact" variant="outline">Learn More</Button>
           </AnimatedSection>
         </div>
@@ -72,7 +72,7 @@ export default function Programs() {
             {/* Basic Plan */}
             <AnimatedSection className="pricing-card">
               <h3>Basic Tier</h3>
-              <div className="price"><span>$</span>100<span>/mo</span></div>
+              <div className="price"><span>₹</span>100<span>/mo</span></div>
               <ul className="features-list">
                 <li><Check size={20} className="check-icon"/> Feature Included One</li>
                 <li><Check size={20} className="check-icon"/> Feature Included Two</li>
@@ -86,7 +86,7 @@ export default function Programs() {
             <AnimatedSection delay={0.1} className="pricing-card popular">
               <div className="popular-badge">Most Popular</div>
               <h3>Standard Tier</h3>
-              <div className="price"><span>$</span>200<span>/mo</span></div>
+              <div className="price"><span>₹</span>200<span>/mo</span></div>
               <ul className="features-list">
                 <li><Check size={20} className="check-icon"/> Feature Included One</li>
                 <li><Check size={20} className="check-icon"/> Feature Included Two</li>
@@ -100,7 +100,7 @@ export default function Programs() {
             {/* Premium Plan */}
             <AnimatedSection delay={0.2} className="pricing-card">
               <h3>Premium Tier</h3>
-              <div className="price"><span>$</span>300<span>/mo</span></div>
+              <div className="price"><span>₹</span>300<span>/mo</span></div>
               <ul className="features-list">
                 <li><Check size={20} className="check-icon"/> Feature Included One</li>
                 <li><Check size={20} className="check-icon"/> Feature Included Two</li>

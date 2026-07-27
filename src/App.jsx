@@ -5,6 +5,7 @@ import About from './pages/About';
 import Programs from './pages/Programs';
 import Results from './pages/Results';
 import Contact from './pages/Contact';
+import Consult from './pages/Consult';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -26,6 +27,7 @@ function App() {
         <Route path="/programs" element={<Programs />} />
         <Route path="/results" element={<Results />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/consult" element={<Consult />} />
       </Routes>
     </>
   );

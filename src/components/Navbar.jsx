@@ -37,12 +37,12 @@ export default function Navbar({ theme = 'dark' }) {
           <Link to="/results">Results</Link>
           <Link to="/contact">Contact</Link>
           <div className="navbar-cta-mobile">
-            <Button to="/contact" variant="primary">Book Consult</Button>
+            <Button to="/consult" variant="primary">Book Consult</Button>
           </div>
         </div>
 
         <div className="navbar-cta-desktop">
-          <Button to="/contact" variant="primary">Book Consult</Button>
+          <Button to="/consult" variant="primary">Book Consult</Button>
         </div>
 
         <button 
