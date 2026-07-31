@@ -26,9 +26,14 @@ export default function Navbar({ theme = 'dark' }) {
   return (
     <nav className={navClass}>
       <div className="container navbar-container">
-        <Link to="/" className="navbar-logo">
-          DEMO COACH
-        </Link>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <Link to="/" className="navbar-logo">
+            DEMO COACH
+          </Link>
+          <a href="#" className="live-now-btn">
+            <span className="live-dot"></span> LIVE NOW
+          </a>
+        </div>
 
         <div className={`navbar-links ${isMobileMenuOpen ? 'open' : ''}`}>
           <Link to="/">Home</Link>
