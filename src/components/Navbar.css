@@ -36,6 +36,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+  max-width: 1600px;
 }
 
 .navbar-logo {
@@ -91,8 +92,8 @@
 }
 
 .nav-btn {
-  padding: 1rem 3rem;
-  font-size: 1.15rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 1.05rem;
   white-space: nowrap;
 }
 
