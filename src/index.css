@@ -1,20 +1,20 @@
 :root {
   /* Colors */
-  --accent-color: #CCFF00; /* Vibrant Neon Green */
-  --accent-hover: #A6CC00;
-  --accent-light: rgba(204, 255, 0, 0.2);
+  --accent-color: #D3D3D3; /* Silver / Light Grey */
+  --accent-hover: #FFFFFF; /* White */
+  --accent-light: rgba(211, 211, 211, 0.2);
   
   /* Dark Theme Variables */
-  --bg-dark: #0A0A0A; /* Deeper black for more contrast */
-  --bg-dark-alt: #141414;
-  --text-dark: #FFFFFF;
-  --text-muted-dark: #A0A0A0;
+  --bg-dark: #000000; /* Pure black */
+  --bg-dark-alt: #1A1A1A; /* Dark grey */
+  --text-dark: #FFFFFF; /* White */
+  --text-muted-dark: #B0B0B0; /* Grey */
   
   /* Light Theme Variables */
-  --bg-light: #1F1F1F;
-  --bg-light-alt: #2A2A2A;
-  --text-light: #F5F5F5;
-  --text-muted-light: #B0B0B0;
+  --bg-light: #FFFFFF; /* White */
+  --bg-light-alt: #F0F0F0; /* Light grey */
+  --text-light: #000000; /* Black */
+  --text-muted-light: #4A4A4A; /* Dark grey */
   
   /* Typography */
   --font-heading: 'Google Sans', Roboto, sans-serif;
