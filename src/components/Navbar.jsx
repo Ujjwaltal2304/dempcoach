@@ -39,16 +39,16 @@ export default function Navbar({ theme = 'dark' }) {
     <nav className={navClass}>
       <div className="container navbar-container">
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <Button onClick={handleUploadClick} variant="primary" style={{ padding: '0.5rem 1rem', fontSize: '0.8rem', whiteSpace: 'nowrap' }}>Upload Lectures</Button>
+          <input type="file" accept="video/*" ref={fileInputRef} onChange={handleFileChange} style={{ display: 'none' }} />
+          
           <Link to="/live" className="live-now-btn">
             <span className="live-dot"></span> LIVE NOW
           </Link>
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Link to="/" className="navbar-logo" style={{ whiteSpace: 'nowrap' }}>
-              DEMO COACH
-            </Link>
-            <Button onClick={handleUploadClick} variant="primary" style={{ padding: '0.2rem 0.6rem', fontSize: '0.7rem', marginTop: '-0.2rem' }}>Upload Lectures</Button>
-            <input type="file" accept="video/*" ref={fileInputRef} onChange={handleFileChange} style={{ display: 'none' }} />
-          </div>
+          
+          <Link to="/" className="navbar-logo" style={{ whiteSpace: 'nowrap' }}>
+            DEMO COACH
+          </Link>
         </div>
 
         <div className={`navbar-links ${isMobileMenuOpen ? 'open' : ''}`}>
