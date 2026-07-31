@@ -79,15 +79,15 @@
   gap: 2rem;
 }
 
-.trust-item h3 {
+.trust-bar .trust-item h3 {
   font-size: 3.5rem;
-  color: var(--bg-dark);
+  color: #000000 !important;
   margin-bottom: 0.5rem;
 }
 
-.trust-item p {
+.trust-bar .trust-item p {
   font-weight: 600;
-  color: var(--bg-dark);
+  color: #111111 !important;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
