@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import Button from './Button';
@@ -8,18 +8,6 @@ export default function Navbar({ theme = 'dark' }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const fileInputRef = useRef(null);
-  
-  const handleUploadClick = () => {
-    fileInputRef.current?.click();
-  };
-  
-  const handleFileChange = (e) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      alert(`Lecture "${file.name}" uploaded successfully!`);
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,13 +27,6 @@ export default function Navbar({ theme = 'dark' }) {
     <nav className={navClass}>
       <div className="container navbar-container">
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-          <Button onClick={handleUploadClick} variant="primary" style={{ padding: '0.5rem 1rem', fontSize: '0.8rem', whiteSpace: 'nowrap' }}>Upload Lectures</Button>
-          <input type="file" accept="video/*" ref={fileInputRef} onChange={handleFileChange} style={{ display: 'none' }} />
-          
-          <Link to="/live" className="live-now-btn">
-            <span className="live-dot"></span> LIVE NOW
-          </Link>
-          
           <Link to="/" className="navbar-logo" style={{ whiteSpace: 'nowrap' }}>
             DEMO COACH
           </Link>
