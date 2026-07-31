@@ -7,6 +7,7 @@ import Results from './pages/Results';
 import Contact from './pages/Contact';
 import Consult from './pages/Consult';
 import Login from './pages/Login';
+import Live from './pages/Live';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,6 +31,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/consult" element={<Consult />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/live" element={<Live />} />
       </Routes>
     </>
   );
