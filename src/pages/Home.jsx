@@ -42,6 +42,10 @@ export default function Home() {
       
       {/* Hero Section */}
       <section className="home-hero">
+        <div style={{ position: 'absolute', top: '120px', right: '2rem', zIndex: 100 }}>
+          <Button onClick={handleUploadClick} variant="primary" style={{ padding: '0.5rem 1rem', fontSize: '0.9rem' }}>Upload Lectures</Button>
+          <input type="file" accept="video/*" ref={fileInputRef} onChange={handleFileChange} style={{ display: 'none' }} />
+        </div>
         <div className="hero-background-container">
           {bgMedia.map((media, index) => (
             media.type === 'video' ? (
@@ -79,8 +83,6 @@ export default function Home() {
             <div className="hero-ctas">
               <Button to="/contact" variant="primary">Primary Action</Button>
               <Button to="/programs" variant="outline">Secondary Action</Button>
-              <Button onClick={handleUploadClick} variant="primary">Upload Lectures</Button>
-              <input type="file" accept="video/*" ref={fileInputRef} onChange={handleFileChange} style={{ display: 'none' }} />
             </div>
           </AnimatedSection>
         </div>
