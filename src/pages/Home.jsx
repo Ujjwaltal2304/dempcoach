@@ -7,11 +7,7 @@ import { Target, Activity, Apple, Users, ArrowRight } from 'lucide-react';
 import './Home.css';
 
 const bgMedia = [
-  { type: 'image', src: 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1470&auto=format&fit=crop' }, // Gym photo with weights/equipment
-  { type: 'image', src: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop' },
-  { type: 'image', src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop' },
-  { type: 'image', src: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1469&auto=format&fit=crop' },
-  { type: 'image', src: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=1470&auto=format&fit=crop' } // Similar gym interior to requested photo
+  { type: 'video', src: '/background.mp4' }
 ];
 
 export default function Home() {
@@ -84,14 +80,16 @@ export default function Home() {
         </div>
         
         {/* Slider Indicator Dots */}
-        <div style={{ position: 'absolute', bottom: '30px', left: '0', width: '100%', display: 'flex', justifyContent: 'center', gap: '10px', zIndex: 20 }}>
-          {bgMedia.map((_, index) => (
-            <div 
-              key={index} 
-              style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: index === currentMediaIndex ? 'var(--accent-color)' : 'rgba(255,255,255,0.5)', transition: 'background-color 0.3s ease' }}
-            />
-          ))}
-        </div>
+        {bgMedia.length > 1 && (
+          <div style={{ position: 'absolute', bottom: '30px', left: '0', width: '100%', display: 'flex', justifyContent: 'center', gap: '10px', zIndex: 20 }}>
+            {bgMedia.map((_, index) => (
+              <div 
+                key={index} 
+                style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: index === currentMediaIndex ? 'var(--accent-color)' : 'rgba(255,255,255,0.5)', transition: 'background-color 0.3s ease' }}
+              />
+            ))}
+          </div>
+        )}
       </section>
 
       {/* Trust Bar */}
