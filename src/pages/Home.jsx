@@ -76,7 +76,7 @@ export default function Home() {
           {bgMedia.map((_, index) => (
             <div 
               key={index} 
-              style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: index === currentMediaIndex ? '#FF6600' : 'rgba(255,255,255,0.5)', transition: 'background-color 0.3s ease' }}
+              style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: index === currentMediaIndex ? 'var(--accent-color)' : 'rgba(255,255,255,0.5)', transition: 'background-color 0.3s ease' }}
             />
           ))}
         </div>

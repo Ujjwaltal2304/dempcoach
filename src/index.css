@@ -1,14 +1,14 @@
 :root {
   /* Colors */
-  --accent-color: #FF6600;
-  --accent-hover: #E65C00;
-  --accent-light: rgba(255, 102, 0, 0.2);
+  --accent-color: #CCFF00; /* Vibrant Neon Green */
+  --accent-hover: #A6CC00;
+  --accent-light: rgba(204, 255, 0, 0.2);
   
   /* Dark Theme Variables */
-  --bg-dark: #1F1F1F;
-  --bg-dark-alt: #2A2A2A;
-  --text-dark: #F5F5F5;
-  --text-muted-dark: #B0B0B0;
+  --bg-dark: #0A0A0A; /* Deeper black for more contrast */
+  --bg-dark-alt: #141414;
+  --text-dark: #FFFFFF;
+  --text-muted-dark: #A0A0A0;
   
   /* Light Theme Variables */
   --bg-light: #1F1F1F;
