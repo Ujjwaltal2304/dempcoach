@@ -7,7 +7,7 @@ import { Target, Activity, Apple, Users, ArrowRight } from 'lucide-react';
 import './Home.css';
 
 const bgMedia = [
-  { type: 'video', src: 'https://cdn.pixabay.com/video/2020/05/26/40141-426173003_large.mp4' }, // reliable pixabay video
+  { type: 'image', src: 'https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=1470&auto=format&fit=crop' }, // Gym photo with weights/equipment
   { type: 'image', src: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop' },
   { type: 'image', src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop' },
   { type: 'image', src: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1469&auto=format&fit=crop' }
