@@ -25,7 +25,7 @@ export default function Navbar({ theme = 'dark' }) {
 
   return (
     <nav className={navClass}>
-      <div className="navbar-container">
+      <div className="container navbar-container">
         <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
           <Link to="/" className="navbar-logo" style={{ whiteSpace: 'nowrap' }}>
             DEMO COACH
