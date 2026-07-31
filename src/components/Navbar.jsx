@@ -27,7 +27,7 @@ export default function Navbar({ theme = 'dark' }) {
     <nav className={navClass}>
       <div className="container navbar-container">
         <Link to="/" className="navbar-logo">
-          DEMO COACH<span>.</span>
+          DEMO COACH
         </Link>
 
         <div className={`navbar-links ${isMobileMenuOpen ? 'open' : ''}`}>

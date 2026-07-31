@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Button from '../components/Button';
@@ -6,13 +6,58 @@ import AnimatedSection from '../components/AnimatedSection';
 import { Target, Activity, Apple, Users, ArrowRight } from 'lucide-react';
 import './Home.css';
 
+const bgMedia = [
+  { type: 'video', src: 'https://cdn.pixabay.com/video/2020/05/26/40141-426173003_large.mp4' }, // reliable pixabay video
+  { type: 'image', src: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop' },
+  { type: 'image', src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1470&auto=format&fit=crop' },
+  { type: 'image', src: 'https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=1469&auto=format&fit=crop' }
+];
+
 export default function Home() {
+  const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentMediaIndex((prevIndex) => (prevIndex + 1) % bgMedia.length);
+    }, 3000); // 3 seconds interval for fast changing
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="theme-dark">
       <Navbar theme="dark" />
       
       {/* Hero Section */}
       <section className="home-hero">
+        <div className="hero-background-container">
+          {bgMedia.map((media, index) => (
+            media.type === 'video' ? (
+              <video
+                key={index}
+                className={`hero-bg-media ${index === currentMediaIndex ? 'active' : ''}`}
+                autoPlay
+                loop
+                muted
+                playsInline
+                style={{ opacity: index === currentMediaIndex ? 1 : 0, zIndex: index === currentMediaIndex ? 1 : 0, transition: 'opacity 1s ease-in-out', position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }}
+              >
+                <source src={media.src} type="video/mp4" />
+              </video>
+            ) : (
+              <div
+                key={index}
+                className={`hero-bg-media ${index === currentMediaIndex ? 'active' : ''}`}
+                style={{
+                  backgroundImage: `url(${media.src})`,
+                  opacity: index === currentMediaIndex ? 1 : 0,
+                  zIndex: index === currentMediaIndex ? 1 : 0,
+                  transition: 'opacity 1s ease-in-out',
+                  position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center'
+                }}
+              />
+            )
+          ))}
+        </div>
         <div className="hero-overlay"></div>
         <div className="container hero-content">
           <AnimatedSection>
@@ -23,6 +68,16 @@ export default function Home() {
               <Button to="/programs" variant="outline">Secondary Action</Button>
             </div>
           </AnimatedSection>
+        </div>
+        
+        {/* Slider Indicator Dots */}
+        <div style={{ position: 'absolute', bottom: '30px', left: '0', width: '100%', display: 'flex', justifyContent: 'center', gap: '10px', zIndex: 20 }}>
+          {bgMedia.map((_, index) => (
+            <div 
+              key={index} 
+              style={{ width: '12px', height: '12px', borderRadius: '50%', backgroundColor: index === currentMediaIndex ? '#FF6600' : 'rgba(255,255,255,0.5)', transition: 'background-color 0.3s ease' }}
+            />
+          ))}
         </div>
       </section>
 
