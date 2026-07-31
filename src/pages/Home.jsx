@@ -79,7 +79,7 @@ export default function Home() {
             <div className="hero-ctas">
               <Button to="/contact" variant="primary">Primary Action</Button>
               <Button to="/programs" variant="outline">Secondary Action</Button>
-              <Button onClick={handleUploadClick} variant="outline" style={{ borderColor: 'var(--text-dark)', color: 'var(--text-dark)' }}>Upload Lectures</Button>
+              <Button onClick={handleUploadClick} variant="primary">Upload Lectures</Button>
               <input type="file" accept="video/*" ref={fileInputRef} onChange={handleFileChange} style={{ display: 'none' }} />
             </div>
           </AnimatedSection>
