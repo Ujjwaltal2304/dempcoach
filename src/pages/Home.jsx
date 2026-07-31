@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Button from '../components/Button';
@@ -16,6 +16,18 @@ const bgMedia = [
 
 export default function Home() {
   const [currentMediaIndex, setCurrentMediaIndex] = useState(0);
+  const fileInputRef = useRef(null);
+
+  const handleUploadClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = (e) => {
+    if (e.target.files && e.target.files[0]) {
+      console.log("Lecture file selected:", e.target.files[0].name);
+      // Backend upload logic would go here
+    }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -67,6 +79,8 @@ export default function Home() {
             <div className="hero-ctas">
               <Button to="/contact" variant="primary">Primary Action</Button>
               <Button to="/programs" variant="outline">Secondary Action</Button>
+              <Button onClick={handleUploadClick} variant="outline" style={{ borderColor: 'var(--text-dark)', color: 'var(--text-dark)' }}>Upload Lectures</Button>
+              <input type="file" accept="video/*" ref={fileInputRef} onChange={handleFileChange} style={{ display: 'none' }} />
             </div>
           </AnimatedSection>
         </div>
